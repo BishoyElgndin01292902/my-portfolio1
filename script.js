@@ -1,6 +1,6 @@
-// Function for toggling project details visibility
+
 document.addEventListener('DOMContentLoaded', function () {
-    
+    // Function for toggling project details visibility
     function toggleProjectDetails() {
         // Select all buttons and details containers
         const buttons = document.querySelectorAll('.toggle-details');
@@ -20,8 +20,40 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+    // Function for form validation and error handling
+    function validateFormAndHandleSubmission() {
+        const form = document.getElementById('contact-form');
+        const errorMessage = document.getElementById('error-message');
+
+        form.addEventListener('submit', function (event) {
+
+            if (!validateForm()) {
+                event.preventDefault(); // Prevent form submission if validation fails
+                errorMessage.style.display = 'block'; // Show error message
+            }
+        });
+
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                return false; // Validation failed
+            }
+
+            // Basic email validation regex
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                return false; // Invalid email format
+            }
+
+            return true; // All validations passed
+        }
+    }
 
     // Call the individual functions to ensure it is executed
     toggleProjectDetails();
+    validateFormAndHandleSubmission();
 
 });
