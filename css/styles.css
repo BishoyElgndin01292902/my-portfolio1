@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; 
+}
+
+header {
+    background-color: hsl(249, 31%, 49%); /* Light gray-blue for the header */
+    color: black;
+    padding: 25px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: black; /* Default text color is black */
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* rounded corners */
+    font-weight: bold;
+}
+
+/* Specific link backgrounds */
+nav ul li a[href="#about"] {
+    background-color: #f0f8ff; 
+}
+
+nav ul li a[href="#projects"] {
+    background-color: #fafad2; 
+}
+
+nav ul li a[href="#contact"] {
+    background-color: #e6e6fa; 
+}
+
+/* Hover effect for navigation links - change background color  on hover*/
+nav ul li a[href="#about"]:hover {
+    background-color: #ff7f50; 
+}
+
+nav ul li a[href="#projects"]:hover {
+    background-color: #dda0dd; 
+}
+
+nav ul li a[href="#contact"]:hover {
+    background-color: #98fb98; 
+}
+
+/* Styling for sections */
+section {
+    min-height: 200px; /* Adjust as needed to ensure each section takes up space */
+    padding: 15px;
+    margin: 30px;
+    border: 30x solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#about {
+    background-color: #ffebcd; 
+    padding: 30px;
+    margin: 30px;
+}
+
+
+#projects {
+    background-color: #ffebcd; 
+    padding: 30px;
+    margin: 30px;
+}
+
+h3 {
+    color: blue;
+}
+
+#contact {
+    background-color: #ffebcd; 
+    padding: 30px;
+    margin: 30px;
+    margin-bottom: 100px; /* Adjust as needed based on footer height */
+}
+
+/* Hover effect for each section - change background color on hover */
+#about:hover {
+    background-color: #f8d0d0; 
+}
+
+#projects:hover { 
+    background-color: #f8d0d0; 
+}
+
+#contact:hover { 
+    background-color: #f8d0d0; 
+}
+
+/* Footer styling */
+footer {
+    background-color: hsl(249, 31%, 49%);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px;
+    position: fixed;
+    margin-top: 20px; /* Adds some space between footer and the content above */
+    width: 100%;
+    bottom: 0;
+}
+
+/* Style for the About section image */
+#about img {
+    border-radius: 50%;  /* Makes the image circular */
+    border: 3px solid #333;  /* Adds a border around the image */
+    margin: 20px 0;  /* Adds space around the image */
+    
+}
+
+/* Styling for <main> tag */
+main {
+    padding: 20px;
+    background-color: #ffffff;  /* Background color for the main content area */
+    margin: 20px auto;  /* margin around the <main> tag */
+    max-width: 1400px;  /*  width of the main content */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  
+    border-radius: 10px;  
+}
