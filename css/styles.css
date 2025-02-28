@@ -135,3 +135,22 @@ main {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  
     border-radius: 10px;  
 }
+
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    header, footer {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+}
