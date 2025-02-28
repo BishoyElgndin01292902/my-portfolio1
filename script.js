@@ -52,8 +52,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Function for geolocation support
+    function handleGeolocation() {
+        // Check if Geolocation is supported
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                alert(`Your location: Latitude: ${lat}, Longitude: ${lon}`);
+            }, function (error) {
+                alert('Unable to retrieve your location');
+            });
+        } else {
+            alert('Geolocation is not supported by this browser.');
+        }
+    }
+
     // Call the individual functions to ensure it is executed
     toggleProjectDetails();
     validateFormAndHandleSubmission();
+    handleGeolocation();
 
 });
