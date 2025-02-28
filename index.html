@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js"></script> <!-- Links to the external JavaScript file -->
 
 </head>
 
@@ -43,23 +44,33 @@
         <!-- Projects Section -->
         <section id="projects">
             <h2>My Projects</h2>
-            <div>
+            <div class="project">
                 <h3>Project 1: College Registration Form</h3>
-                <img src="https://img.freepik.com/premium-vector/woman-with-online-form-concept-young-girl-logs-website-authorization-authentication-protection-personal-data-security-system-webpage-cartoon-flat-vector-illustration_1002658-373.jpg"
-                    alt="Project 1 Screenshot" width="300" height="300">
-                <p>This project is about creating a college registration form for students. The form collects basic
-                    information like first name, last name, email, address,
-                    and date of birth. It's designed to be easy to use, making it quick for students to fill out their
-                    details.</p>
+                <button class="toggle-details">Show Details</button>
+                <div class="project-details" style="display: none;">
+                    <br></br>
+                    <img src="https://img.freepik.com/premium-vector/woman-with-online-form-concept-young-girl-logs-website-authorization-authentication-protection-personal-data-security-system-webpage-cartoon-flat-vector-illustration_1002658-373.jpg"
+                        alt="Project 1 Screenshot" width="300" height="300">
+                    <p>This project is about creating a college registration form for students. The form collects basic
+                        information like first name, last name, email, address,
+                        and date of birth. It's designed to be easy to use, making it quick for students to fill out
+                        their
+                        details.</p>
+                </div>
             </div>
-            <div>
+
+            <div class="project">
                 <h3>Project 2: Personal Webpage</h3>
-                <img src="https://image.freepik.com/free-vector/personal-site-concept-illustration_114360-2577.jpg"
-                    alt="Project 2 Screenshot" width="300" height="300">
-                <p>This project involves creating a personal webpage to showcase individual information, skills, and
-                    interests. The webpage includes sections like an "About Me" section,
-                    a portfolio of work, and contact details, all designed to present the user’s personal brand in a
-                    clear and attractive way.</p>
+                <button class="toggle-details">Show Details</button>
+                <div class="project-details" style="display: none;">
+                    <br></br>
+                    <img src="https://image.freepik.com/free-vector/personal-site-concept-illustration_114360-2577.jpg"
+                        alt="Project 2 Screenshot" width="300" height="300">
+                    <p>This project involves creating a personal webpage to showcase individual information, skills, and
+                        interests. The webpage includes sections like an "About Me" section,
+                        a portfolio of work, and contact details, all designed to present the user’s personal brand in a
+                        clear and attractive way.</p>
+                </div>
             </div>
         </section>
 
