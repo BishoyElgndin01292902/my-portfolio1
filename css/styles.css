@@ -143,6 +143,47 @@ main {
     border-radius: 10px;  
 }
 
+/* Styling for the Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between form elements */
+}
+
+#contact label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+#contact input:focus, #contact textarea:focus {
+    outline: none;
+    border-color: #7d8eeb;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: hsl(249, 31%, 49%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+#contact button:hover {
+    background-color: #45a049;
+}
 
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
@@ -159,5 +200,8 @@ main {
     section {
         padding: 10px;
         margin: 10px;
+    }
+    #contact form {
+        padding: 10px;
     }
 }
