@@ -126,6 +126,13 @@ footer {
     
 }
 
+#projects img {
+    border-radius: 50%;  /* Makes the image rounded */
+    border: 3px solid #333;  /* Adds a border around the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adds a slight shadow for effect */
+    margin-bottom: 15px;  /* Adds some space below the image */
+}
+
 /* Styling for <main> tag */
 main {
     padding: 20px;
