@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     // Function for toggling project details visibility
     function toggleProjectDetails() {
@@ -83,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
     //  **NEW FEATURE: Dark Mode Toggle** 
     function setupDarkModeToggle() {
         const darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -106,8 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
-
     // **🔹 New Animation Function: Button Hover Animation**
     function animateButtonHover() {
         const buttons = document.querySelectorAll('button');
@@ -122,12 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-
     // Call the individual functions to ensure it is executed
     toggleProjectDetails();
     validateFormAndHandleSubmission();
     handleGeolocation();
     setupDarkModeToggle();
     animateButtonHover();
-
 });

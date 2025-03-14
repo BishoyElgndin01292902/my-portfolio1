@@ -6,24 +6,20 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4; 
 }
-
 header {
     background-color: hsl(249, 31%, 49%); /* Light gray-blue for the header */
     color: black;
     padding: 25px;
     text-align: center;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
 }
-
 nav ul li {
     display: inline;
     margin-right: 20px;
 }
-
 nav ul li a {
     color: black; /* Default text color is black */
     text-decoration: none;
@@ -31,33 +27,26 @@ nav ul li a {
     border-radius: 5px; /* rounded corners */
     font-weight: bold;
 }
-
 /* Specific link backgrounds */
 nav ul li a[href="#about"] {
     background-color: #f0f8ff; 
 }
-
 nav ul li a[href="#projects"] {
     background-color: #fafad2; 
 }
-
 nav ul li a[href="#contact"] {
     background-color: #e6e6fa; 
 }
-
 /* Hover effect for navigation links - change background color  on hover*/
 nav ul li a[href="#about"]:hover {
     background-color: #ff7f50; 
 }
-
 nav ul li a[href="#projects"]:hover {
     background-color: #dda0dd; 
 }
-
 nav ul li a[href="#contact"]:hover {
     background-color: #98fb98; 
 }
-
 /* Styling for sections */
 section {
     min-height: 200px; /* Adjust as needed to ensure each section takes up space */
@@ -67,44 +56,35 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 #about {
     background-color: #ffebcd; 
     padding: 30px;
     margin: 30px;
 }
-
-
 #projects {
     background-color: #ffebcd; 
     padding: 30px;
     margin: 30px;
 }
-
 h3 {
     color: blue;
 }
-
 #contact {
     background-color: #ffebcd; 
     padding: 30px;
     margin: 30px;
     margin-bottom: 100px; /* Adjust as needed based on footer height */
 }
-
 /* Hover effect for each section - change background color on hover */
 #about:hover {
     background-color: #f8d0d0; 
 }
-
 #projects:hover { 
     background-color: #f8d0d0; 
 }
-
 #contact:hover { 
     background-color: #f8d0d0; 
 }
-
 /* Footer styling */
 footer {
     background-color: hsl(249, 31%, 49%);
@@ -117,7 +97,6 @@ footer {
     width: 100%;
     bottom: 0;
 }
-
 /* Style for the About section image */
 #about img {
     border-radius: 50%;  /* Makes the image circular */
@@ -125,14 +104,12 @@ footer {
     margin: 20px 0;  /* Adds space around the image */
     
 }
-
 #projects img {
     border-radius: 50%;  /* Makes the image rounded */
     border: 3px solid #333;  /* Adds a border around the image */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adds a slight shadow for effect */
     margin-bottom: 15px;  /* Adds some space below the image */
 }
-
 /* Styling for <main> tag */
 main {
     padding: 20px;
@@ -142,19 +119,16 @@ main {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  
     border-radius: 10px;  
 }
-
 /* Styling for the Contact Form */
 #contact form {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Adds space between form elements */
 }
-
 #contact label {
     font-weight: bold;
     margin-bottom: 5px;
 }
-
 #contact input, #contact textarea {
     padding: 10px;
     border: 1px solid #ccc;
@@ -163,12 +137,10 @@ main {
     width: 100%;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
-
 #contact input:focus, #contact textarea:focus {
     outline: none;
     border-color: #7d8eeb;
 }
-
 #contact button {
     padding: 10px 20px;
     background-color: hsl(249, 31%, 49%);
@@ -179,24 +151,20 @@ main {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 /* Hover effect for button */
 #contact button:hover {
     background-color: #45a049;
 }
-
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
     header, footer {
         padding: 10px;
     }
-
     nav ul li {
         display: block;
         text-align: center;
         margin: 20px 0;
     }
-
     section {
         padding: 10px;
         margin: 10px;
@@ -205,7 +173,6 @@ main {
         padding: 10px;
     }
 }
-
 /* Default button styling */
 #dark-mode-toggle {
     color: black;
@@ -216,9 +183,7 @@ main {
     cursor: pointer;
     padding: 10px;
     margin: 10px;
-    
 }
-
 /* Style when dark mode is active */
 .dark-mode #dark-mode-toggle {
     color: yellowgreen;
@@ -226,35 +191,28 @@ main {
     background-color: black;
     border: 2px solid yellowgreen;
 }
-
 /*  Dark Mode Styles  */
 .dark-mode {
     background-color: black;
     color: blue;
 }
-
 .dark-mode header, 
 .dark-mode footer {
     background-color: black;
     color: yellowgreen;
 }
-
 .dark-mode nav ul li a {
     color: yellowgreen;
 }
-
 .dark-mode nav ul li a[href="#about"] {
     background-color: #2a2a2a;
 }
-
 .dark-mode nav ul li a[href="#projects"] {
     background-color: #3a3a3a;
 }
-
 .dark-mode nav ul li a[href="#contact"] {
     background-color: #4a4a4a;
 }
-
 /* Add the animation for buttons */
 /* Keep button width and height fixed, but scale the content */
 button {
@@ -263,7 +221,6 @@ button {
     border: none; 
     outline: none;
 }
-
 /* On hover, scale only the content */
 button.hovered {
     transform: scale(1.03); /* Button grows slightly when hovered */
