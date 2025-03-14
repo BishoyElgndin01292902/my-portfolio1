@@ -106,10 +106,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
+
+    // **🔹 New Animation Function: Button Hover Animation**
+    function animateButtonHover() {
+        const buttons = document.querySelectorAll('button');
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', function () {
+                this.classList.add('hovered'); // Add 'hovered' class on mouse enter
+            });
+
+            button.addEventListener('mouseleave', function () {
+                this.classList.remove('hovered'); // Remove 'hovered' class on mouse leave
+            });
+        });
+    }
+
     // Call the individual functions to ensure it is executed
     toggleProjectDetails();
     validateFormAndHandleSubmission();
     handleGeolocation();
     setupDarkModeToggle();
+    animateButtonHover();
 
 });

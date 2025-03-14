@@ -254,3 +254,18 @@ main {
 .dark-mode nav ul li a[href="#contact"] {
     background-color: #4a4a4a;
 }
+
+/* Add the animation for buttons */
+/* Keep button width and height fixed, but scale the content */
+button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 10px 10px; /* Make sure padding is consistent */
+    border: none; 
+    outline: none;
+}
+
+/* On hover, scale only the content */
+button.hovered {
+    transform: scale(1.03); /* Button grows slightly when hovered */
+    background-color: #45a049; /* Change background color */
+}
