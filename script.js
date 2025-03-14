@@ -68,6 +68,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // NEW FEATURE: Smooth Scrolling for Navigation Links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default anchor click behavior
+            const targetId = this.getAttribute('href'); // Get section ID from href
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50, // Adjust for header height if needed
+                    behavior: 'smooth' // Enable smooth scrolling
+                });
+            }
+        });
+    });
+
     // Call the individual functions to ensure it is executed
     toggleProjectDetails();
     validateFormAndHandleSubmission();
