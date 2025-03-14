@@ -83,9 +83,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
+    //  **NEW FEATURE: Dark Mode Toggle** 
+    function setupDarkModeToggle() {
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // Load user's dark mode preference from local storage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+        }
+
+        darkModeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-mode');
+
+            // Save user preference to local storage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    }
+
     // Call the individual functions to ensure it is executed
     toggleProjectDetails();
     validateFormAndHandleSubmission();
     handleGeolocation();
+    setupDarkModeToggle();
 
 });

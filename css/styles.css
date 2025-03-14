@@ -205,3 +205,52 @@ main {
         padding: 10px;
     }
 }
+
+/* Default button styling */
+#dark-mode-toggle {
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+/* Style when dark mode is active */
+.dark-mode #dark-mode-toggle {
+    color: yellowgreen;
+    font-weight: bold;
+    background-color: black;
+    border: 2px solid yellowgreen;
+}
+
+/*  Dark Mode Styles  */
+.dark-mode {
+    background-color: black;
+    color: blue;
+}
+
+.dark-mode header, 
+.dark-mode footer {
+    background-color: black;
+    color: yellowgreen;
+}
+
+.dark-mode nav ul li a {
+    color: yellowgreen;
+}
+
+.dark-mode nav ul li a[href="#about"] {
+    background-color: #2a2a2a;
+}
+
+.dark-mode nav ul li a[href="#projects"] {
+    background-color: #3a3a3a;
+}
+
+.dark-mode nav ul li a[href="#contact"] {
+    background-color: #4a4a4a;
+}
