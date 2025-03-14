@@ -226,3 +226,10 @@ button.hovered {
     transform: scale(1.03); /* Button grows slightly when hovered */
     background-color: #45a049; /* Change background color */
 }
+
+.lazy-load {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #f3f3f3; /* Placeholder background */
+}

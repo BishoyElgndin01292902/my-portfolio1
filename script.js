@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // **🔹 New Animation Function: Button Hover Animation**
+    // New Animation Function: Button Hover Animation
     function animateButtonHover() {
         const buttons = document.querySelectorAll('button');
 
@@ -118,6 +118,57 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    // NEW LAZY LOAD IMAGE FEATURE
+    // Select all images with the lazy-load class
+    const lazyImages = document.querySelectorAll('.lazy-load');
+
+    // Check if an image is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+
+    // Load the image
+    function loadImage(image) {
+        const src = image.getAttribute('data-src'); // Get the actual image URL
+        if (src) {
+            image.src = src; // Set the real src
+            image.onload = function () {
+                image.classList.remove('lazy-load'); // Remove the lazy-load class when the image is loaded
+            };
+        }
+    }
+
+    // Load images when they come into the viewport
+    function handleScroll() {
+        lazyImages.forEach(function (image) {
+            if (isInViewport(image)) {
+                loadImage(image); // Load the image if it’s in the viewport
+            }
+        });
+    }
+
+    // **Add the intersection observer to handle lazy load:**
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                loadImage(image); // Load the image
+                observer.unobserve(image); // Stop observing after the image has loaded
+            }
+        });
+    }, {
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the image is visible
+    });
+
+    // Start observing each image with the lazy-load class
+    lazyImages.forEach(image => {
+        observer.observe(image);
+    });
+
     // Call the individual functions to ensure it is executed
     toggleProjectDetails();
     validateFormAndHandleSubmission();
