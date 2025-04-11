@@ -131,6 +131,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Animation for Images
+    function animateImages() {
+        const images = document.querySelectorAll('.animated-image');
+
+        images.forEach(image => {
+            image.addEventListener('mouseenter', function () {
+                this.style.transform = 'scale(1.1)';
+                this.style.transition = 'transform 0.3s ease-in-out';
+            });
+
+            image.addEventListener('mouseleave', function () {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    }
+
 
     function animateNavButtonHover() {
         const navButtons = document.querySelectorAll('nav ul li a'); // Targets navigation links
@@ -212,4 +228,5 @@ document.addEventListener('DOMContentLoaded', function () {
     animateButtonHover();
     animateNavButtonHover();
     setupFAQ();
+    animateImages(); 
 });

@@ -319,6 +319,28 @@ nav ul li a {
 }
 
 
+/* Add this new CSS for the image animation */
+.animated-image {
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.animated-image:hover {
+    transform: scale(1.1); /* Scale the image by 10% on hover */
+}
+
+.animated-image {
+    width: 100%; /* Adjust to fit container */
+    max-width: 250px; /* Set a max width to prevent overscaling */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.animated-image:hover {
+    transform: scale(1.1); /* Scale on hover */
+}
+
+
+
 
 
 
