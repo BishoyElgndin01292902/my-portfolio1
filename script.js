@@ -51,6 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // New Interactive FAQ Section Function 
+    function setupFAQ() {
+        const faqs = document.querySelectorAll('.faq-item');
+
+        faqs.forEach(faq => {
+            const question = faq.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                faq.classList.toggle('active');
+            });
+        });
+    }
+
     // Function for geolocation support
     function handleGeolocation() {
         // Check if Geolocation is supported
@@ -119,6 +131,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
+    function animateNavButtonHover() {
+        const navButtons = document.querySelectorAll('nav ul li a'); // Targets navigation links
+        navButtons.forEach(button => {
+            button.addEventListener('mouseenter', function () {
+                this.classList.add('hovered'); // Add hover effect on mouse enter
+            });
+            button.addEventListener('mouseleave', function () {
+                this.classList.remove('hovered'); // Remove hover effect on mouse leave
+            });
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
     // NEW LAZY LOAD IMAGE FEATURE
     // Select all images with the lazy-load class
     const lazyImages = document.querySelectorAll('.lazy-load');
@@ -175,4 +210,6 @@ document.addEventListener('DOMContentLoaded', function () {
     handleGeolocation();
     setupDarkModeToggle();
     animateButtonHover();
+    animateNavButtonHover();
+    setupFAQ();
 });

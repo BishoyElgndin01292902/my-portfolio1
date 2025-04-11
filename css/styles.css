@@ -73,7 +73,7 @@ h3 {
     background-color: #ffebcd; 
     padding: 30px;
     margin: 30px;
-    margin-bottom: 100px; /* Adjust as needed based on footer height */
+    margin-bottom: 20px; /* Adjust as needed based on footer height */
 }
 /* Hover effect for each section - change background color on hover */
 #about:hover {
@@ -85,6 +85,22 @@ h3 {
 #contact:hover { 
     background-color: #f8d0d0; 
 }
+
+
+nav ul li a[href="#faq-section"] {
+    background-color: #f4f4f4; /* Light background for the FAQ link */
+    border: 2px solid transparent; /* Default transparent border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 15px; /* Consistent padding for all buttons */
+    font-weight: bold; /* Consistent font weight */
+}
+
+nav ul li a[href="#faq-section"]:hover {
+    background-color: hsl(249, 51%, 39%); /* Change background color on hover */
+    border: 2px solid hsl(249, 31%, 49%); /* Add a border on hover */
+    
+}
+
 /* Footer styling */
 footer {
     background-color: hsl(249, 31%, 49%);
@@ -213,6 +229,11 @@ main {
 .dark-mode nav ul li a[href="#contact"] {
     background-color: #4a4a4a;
 }
+    
+.dark-mode nav ul li a[href="#faq-section"] {
+    background-color: #4a4a4a;
+}
+
 /* Add the animation for buttons */
 /* Keep button width and height fixed, but scale the content */
 button {
@@ -233,3 +254,74 @@ button.hovered {
     height: auto;
     background-color: #f3f3f3; /* Placeholder background */
 }
+
+
+/* Navigation Link Default Style */
+nav ul li a {
+    display: inline-block; /* Ensures scaling affects only the link */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth animation for scaling and background color */
+    padding: 10px 15px; /* Space around the text for better button size */
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover Animation Style */
+.hovered {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    background-color: #45a049; /* Change background color */
+    color: rgb(94, 5, 5); /* Optional: Change text color */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+
+/* FAQ Section Styles */
+
+#faq-section {
+    background-color: #ffebcd; 
+    padding: 30px;
+    margin: 30px;
+    margin-bottom: 100px; /* Adjust as needed based on footer height */
+    background-color: #ffebcd; 
+    border-radius: 10px;
+}
+
+#faq-section:hover {
+    background-color: #c8d4da; /* Slightly darker background on hover */
+}
+
+
+.faq-item {
+    border-bottom: 1px solid ;
+    padding: 10px 0;
+}
+
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    color: hsl(249, 31%, 49%);
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: hsl(249, 51%, 39%);
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 5px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+
+
+
+
+
+
+
