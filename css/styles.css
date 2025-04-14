@@ -97,8 +97,7 @@ nav ul li a[href="#faq-section"] {
 
 nav ul li a[href="#faq-section"]:hover {
     background-color: hsl(249, 51%, 39%); /* Change background color on hover */
-    border: 2px solid hsl(249, 31%, 49%); /* Add a border on hover */
-    
+    border: 2px solid hsl(249, 31%, 49%); /* Add a border on hover */ 
 }
 
 /* Footer styling */
@@ -255,7 +254,6 @@ button.hovered {
     background-color: #f3f3f3; /* Placeholder background */
 }
 
-
 /* Navigation Link Default Style */
 nav ul li a {
     display: inline-block; /* Ensures scaling affects only the link */
@@ -272,15 +270,12 @@ nav ul li a {
     color: rgb(94, 5, 5); /* Optional: Change text color */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
-
-
 /* FAQ Section Styles */
-
 #faq-section {
     background-color: #ffebcd; 
     padding: 30px;
     margin: 30px;
-    margin-bottom: 100px; /* Adjust as needed based on footer height */
+    margin-bottom: 20px; /* Adjust as needed based on footer height */
     background-color: #ffebcd; 
     border-radius: 10px;
 }
@@ -288,7 +283,6 @@ nav ul li a {
 #faq-section:hover {
     background-color: #c8d4da; /* Slightly darker background on hover */
 }
-
 
 .faq-item {
     border-bottom: 1px solid ;
@@ -339,6 +333,33 @@ nav ul li a {
     transform: scale(1.1); /* Scale on hover */
 }
 
+#calendar, table {
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    width:80%;
+    background-color: #ffebcd; 
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+  th {
+    border-style:solid;
+    border-width:1px;
+    margin:10px;
+    padding:10px;
+  }
+  .day {
+    border-style:solid;
+    border-width:1px;
+    margin:10px;
+    padding:10px;  
+  }
+  .today {
+    background-color:palegreen;
+  }
+  .weekend {
+    color:gray;
+  }
 
 
 

@@ -160,16 +160,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
-
-
-
-
-
-
-
-
-
     // NEW LAZY LOAD IMAGE FEATURE
     // Select all images with the lazy-load class
     const lazyImages = document.querySelectorAll('.lazy-load');
@@ -228,5 +218,168 @@ document.addEventListener('DOMContentLoaded', function () {
     animateButtonHover();
     animateNavButtonHover();
     setupFAQ();
-    animateImages(); 
+    animateImages();
 });
+
+function Calendar(elem) {
+    this.elem = elem;
+    this.dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    this.getMonth = function (monthIndex) {
+        if (typeof monthIndex !== 'number' || monthIndex < 0 || monthIndex > 11) {
+            return "Unknown";
+        } else {  // If monthIndex is valid
+            // Check each possible value of monthIndex and return the corresponding month name
+            if (monthIndex === 0) {
+                return "January";
+            } else if (monthIndex === 1) {
+                return "February";
+            } else if (monthIndex === 2) {
+                return "March";
+            } else if (monthIndex === 3) {
+                return "April";
+            } else if (monthIndex === 4) {
+                return "May";
+            } else if (monthIndex === 5) {
+                return "June";
+            } else if (monthIndex === 6) {
+                return "July";
+            } else if (monthIndex === 7) {
+                return "August";
+            } else if (monthIndex === 8) {
+                return "September";
+            } else if (monthIndex === 9) {
+                return "October";
+            } else if (monthIndex === 10) {
+                return "November";
+            } else {
+                return "December"; // Return "December" for monthIndex = 11
+            }
+        }
+    }
+
+    this.getDaysInMonth = function (monthIndex, year) {
+        if (typeof monthIndex !== 'number' || typeof year !== 'number') {
+            return -1;
+        }
+
+        if (monthIndex < 0 || monthIndex > 11) {
+            return -1;
+        }
+
+        if (monthIndex === 1) {
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                return 29;
+            } else {
+                return 28;
+            }
+        } else {
+            if (monthIndex === 3 || monthIndex === 5 || monthIndex === 8 || monthIndex === 10) {
+                return 30;
+            } else {
+                return 31;
+            }
+        }
+    }
+
+    this.display = function (displayDate = new Date()) {
+        this.elem.innerHTML = ""; // Clear the calendar element
+
+        let daysInMonth = this.getDaysInMonth(displayDate.getMonth(), displayDate.getFullYear());
+        let days = [];
+        for (let i = 1; i <= daysInMonth; i++) {
+            days.push(new Date(displayDate.getFullYear(), displayDate.getMonth(), i));
+        }
+
+        // Create table
+        let table = document.createElement("table");
+
+        // Create table head (thead)
+        let thead = document.createElement("thead");
+        table.appendChild(thead);
+
+        // Row for navigation buttons and month name
+        let row = document.createElement("tr");
+        thead.appendChild(row);
+
+        // Previous month button
+        let prevButtonCell = document.createElement("td");
+        row.appendChild(prevButtonCell);
+        let prevButton = document.createElement("button");
+        prevButton.textContent = "<< Previous Month";
+        prevButton.addEventListener("click", function () {
+            displayDate.setMonth(displayDate.getMonth() - 1);
+            this.display(displayDate);
+        }.bind(this));
+        prevButtonCell.appendChild(prevButton);
+
+        // Month and year header
+        let monthYearCell = document.createElement("td");
+        monthYearCell.setAttribute("colspan", "5");
+        let header = document.createElement("h1");
+        header.textContent = this.getMonth(displayDate.getMonth()) + " " + displayDate.getFullYear();
+        monthYearCell.appendChild(header);
+        row.appendChild(monthYearCell);
+
+        // Next month button
+        let nextButtonCell = document.createElement("td");
+        row.appendChild(nextButtonCell);
+        let nextButton = document.createElement("button");
+        nextButton.textContent = "Next Month >>";
+        nextButton.addEventListener("click", function () {
+            displayDate.setMonth(displayDate.getMonth() + 1);
+            this.display(displayDate);
+        }.bind(this));
+        nextButtonCell.appendChild(nextButton);
+
+        // Row for day names
+        row = document.createElement("tr");
+        thead.appendChild(row);
+        this.dayNames.forEach(function (day) {
+            let cell = document.createElement("th");
+            cell.textContent = day;
+            row.appendChild(cell);
+        });
+
+        // Create table body (tbody)
+        let tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+
+        // Days of the month
+        row = document.createElement("tr");
+        tbody.appendChild(row);
+
+        // Empty cells for the days before the first day of the month
+        for (let i = 0; i < days[0].getDay(); i++) {
+            let cell = document.createElement("td");
+            row.appendChild(cell);
+        }
+
+        // Days in the month
+        days.forEach(function (date) {
+            if (date.getDay() === 0) {
+                row = document.createElement("tr");
+                tbody.appendChild(row);
+            }
+            let cell = document.createElement("td");
+            cell.classList.add("day");
+            if (date.toDateString() === new Date().toDateString()) {
+                cell.classList.add("today");
+            }
+            cell.textContent = date.getDate();
+            row.appendChild(cell);
+        });
+
+        // Empty cells for the days after the last day of the month
+        for (let i = days[days.length - 1].getDay() + 1; i < 7; i++) {
+            let cell = document.createElement("td");
+            row.appendChild(cell);
+        }
+
+        // Append table to the calendar element
+        this.elem.appendChild(table);
+    }
+}
+
+const cal = new Calendar(document.getElementById("calendar"));
+cal.display();
