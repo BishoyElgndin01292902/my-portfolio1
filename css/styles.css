@@ -170,24 +170,7 @@ main {
 #contact button:hover {
     background-color: #45a049;
 }
-/* Media Queries for Mobile Devices */
-@media only screen and (max-width: 600px) {
-    header, footer {
-        padding: 10px;
-    }
-    nav ul li {
-        display: block;
-        text-align: center;
-        margin: 20px 0;
-    }
-    section {
-        padding: 10px;
-        margin: 10px;
-    }
-    #contact {
-        padding: 10px;
-    }
-}
+
 /* Default button styling */
 #dark-mode-toggle {
     color: black;
@@ -333,33 +316,74 @@ nav ul li a {
     transform: scale(1.1); /* Scale on hover */
 }
 
-#calendar, table {
+#calendar {
+    display: flex;
     margin-left:auto;
     margin-right:auto;
-    text-align:center;
-    width:80%;
-    background-color: #ffebcd; 
-    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
     margin-bottom: 50px;
-  }
-  th {
-    border-style:solid;
-    border-width:1px;
-    margin:10px;
-    padding:10px;
-  }
-  .day {
-    border-style:solid;
-    border-width:1px;
-    margin:10px;
-    padding:10px;  
-  }
-  .today {
-    background-color:palegreen;
-  }
-  .weekend {
-    color:gray;
-  }
+    background-color: #ffebcd;
+    overflow-x: auto; /* prevents horizontal overflow */
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* prevents table from being too wide */
+    border-collapse: collapse;
+}
+
+th, .day {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 14px;
+    min-width: 40px;
+}
+
+.today {
+    background-color: palegreen;
+}
+
+.weekend {
+    color: gray;
+}
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    #calendar {
+        padding: 10px;
+    }
+
+    th, .day {
+        padding: 5px;
+        font-size: 12px;
+        min-width: 30px;
+    }
+
+    table {
+        width: 100%;
+    }
+    header, footer {
+        padding: 10px;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+    #contact {
+        padding: 10px;
+    }
+
+}
+
 
 
 
