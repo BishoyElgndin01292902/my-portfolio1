@@ -322,7 +322,7 @@ nav ul li a {
     margin-right:auto;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    
     box-sizing: border-box;
     margin-bottom: 50px;
     background-color: #ffebcd;
@@ -331,8 +331,8 @@ nav ul li a {
 
 table {
     text-align: center;
-    width: 100%;
-    max-width: 300px; /* prevents table from being too wide */
+    width: 90%;
+    max-width: 250px; /* prevents table from being too wide */
     border-collapse: collapse;
 }
 
@@ -381,32 +381,7 @@ th, .day {
     #contact {
         padding: 10px;
     }
-
 }
-
-
-/*##
-
-/* Media Queries for Mobile Devices 
-@media only screen and (max-width: 600px) {
-    header, footer {
-        padding: 10px;
-    }
-    nav ul li {
-        display: block;
-        text-align: center;
-        margin: 20px 0;
-    }
-    section {
-        padding: 10px;
-        margin: 10px;
-    }
-    #contact {
-        padding: 10px;
-    }
-
-}
-*/
 
 
 
