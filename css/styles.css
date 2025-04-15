@@ -322,7 +322,7 @@ nav ul li a {
     margin-right:auto;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 95%;
     box-sizing: border-box;
     margin-bottom: 50px;
     background-color: #ffebcd;
@@ -332,15 +332,15 @@ nav ul li a {
 table {
     text-align: center;
     width: 100%;
-    max-width: 600px; /* prevents table from being too wide */
+    max-width: 300px; /* prevents table from being too wide */
     border-collapse: collapse;
 }
 
 th, .day {
     border: 1px solid black;
-    padding: 5px;
-    font-size: 14px;
-    min-width: 40px;
+    padding: 2px;
+    font-size: 12px;
+    min-width: 20px;
 }
 
 .today {
@@ -354,7 +354,7 @@ th, .day {
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
     #calendar {
-        padding: 10px;
+        padding: 3px;
     }
 
     th, .day {
