@@ -331,8 +331,8 @@ nav ul li a {
 
 table {
     text-align: center;
-    width: 90%;
-    max-width: 90px; /* prevents table from being too wide */
+    width: 50%;
+    max-width: 50px; /* prevents table from being too wide */
     border-collapse: collapse;
 }
 
